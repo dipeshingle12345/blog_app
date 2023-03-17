@@ -21,3 +21,30 @@
     <%= form.submit %>
   </div>
 <% end %>
+
+
+
+<%= image_tag 'BillyGoat.jpg',
+  class: 'w-100 rounded-circle shadow-lg d-block mx-auto',
+  style: 'max-width: 32rem;'
+%>
+
+<% @greeting = capture do %>
+  <p>Welcome! The date and time is <%= Time.now %></p>
+<% end %>
+
+<%= javascript_tag "alert('All is good')" %>
+
+<div><%= distance_of_time_in_words(Time.now, Time.now + 15.seconds) %></div>
+
+<%= distance_of_time_in_words(Time.now, Time.now + 15.seconds, include_seconds: true) %>
+<div>
+<%= time_ago_in_words(3.minutes.from_now) %>
+</div>
+<%= number_to_currency(1234567890.50)%>
+<%= number_to_human(1234567)%>
+<%= 
+number_to_human_size(1234567)
+%>
+<%= number_to_phone(1235551234)%>
+<%= number_with_precision(111.2345, precision: 2) %>
