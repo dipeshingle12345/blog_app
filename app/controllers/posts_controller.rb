@@ -4,6 +4,11 @@ class PostsController < ApplicationController
   # GET /posts or /posts.json
   def index
     @posts = Post.all
+    # if you want to find a collection of the dates on which orders were created:
+    # @posts = Post.select("created_at").group("created_at")
+
+
+    
   end
 
   # GET /posts/1 or /posts/1.json

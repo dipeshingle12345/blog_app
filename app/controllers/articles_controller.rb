@@ -1,6 +1,9 @@
 class ArticlesController < ApplicationController
+   
   def index
     @articles = Article.all
+    # Article.includes(:comments).limit(10)
+
   end
 
   def show
